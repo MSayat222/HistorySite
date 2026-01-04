@@ -374,17 +374,32 @@ section:hover {
 
 /* Image Placeholders - Modern */
 .image-placeholder {
-    background: linear-gradient(135deg, var(--bg-pink-light) 0%, #f8bbd0 100%);
-    border: 2px dashed var(--accent-pink-light);
-    border-radius: 16px;
-    padding: 80px 40px;
+    max-width: 100%;
+    align-self: center;
+    display: block;
     text-align: center;
-    color: var(--secondary-text);
     margin: 40px 0;
     position: relative;
-    overflow: hidden;
+    overflow: auto;
     transition: all 0.3s ease;
+    border-radius: 18px;
+
 }
+
+.small-image {
+    display: flex;
+    justify-content: center;
+    margin: 32px 0;
+}
+
+.small-image img {
+    max-width: 320px;   /* adjust if needed */
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    display: block;
+}
+
 
 .image-placeholder:hover {
     border-color: var(--accent-pink);
@@ -392,7 +407,6 @@ section:hover {
 }
 
 .image-placeholder::before {
-    content: '🖼️';
     font-size: 4rem;
     display: block;
     margin-bottom: 20px;
